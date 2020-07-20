@@ -1,0 +1,32 @@
+{
+  "name": "Minecraft en Heroku",
+  "description": "Spigot en Heroku por osiann",
+  "keywords": [
+    "games",
+    "minecraft",
+    "spigot"
+  ],
+  "repository": "https://github.com/kimbang012/Spigot-on-Heroku",
+  "env": {
+    "MINECRAFT_EULA": {
+      "description": "Aeptar el Minecraft EULA?",
+      "value": "true"
+    },
+    "NGROK_API_TOKEN": {
+      "description": "tu ngrok API token",
+      "required": true
+    },
+    "DBCONFIG": {
+      "description": "tu dropbox API token",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-jvm-common"
+    },
+    {
+      "url": "https://github.com/kr/heroku-buildpack-inline.git"
+    }
+  ]
+}
